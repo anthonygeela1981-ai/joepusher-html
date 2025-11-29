@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <style>
+    body { background-color: #000; color: #fff; font-family: Arial, sans-serif; margin: 0; padding: 2rem; min-height: 100vh; }
+    h1 { color: #dc2626; margin-bottom: 2rem; text-align: center; }
+    .sections { display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; }
+    .section { background-color: #111; padding: 2rem; border-radius: 1rem; width: 300px; }
+    h2 { color: #16a34a; margin-bottom: 1rem; }
+    button { background-color: #16a34a; color: #fff; padding: 1rem; border: none; border-radius: 0.5rem; cursor: pointer; width: 100%; margin-top: 1rem; }
+    button:hover { background-color: #15803d; }
+    .prices { color: #9333ea; }
+    .prices button { background-color: #9333ea; }
+    .prices button:hover { background-color: #7c3aed; }
+    .logout { background-color: #dc2626; margin-top: 3rem; display: block; width: 200px; margin: 3rem auto 0; }
+    .logout:hover { background-color: #b91c1c; }
+  </style>
+</head>
+<body>
+  <h1>Admin Dashboard</h1>
+  <div class="sections">
+    <div class="section">
+      <h2>Upload 4K Video/Album</h2>
+      <p>Drag-drop MP4 or ZIP</p>
+      <button onclick="upload()">Upload Now</button>
+    </div>
+    <div class="section prices">
+      <h2>Prices</h2>
+      <p>Sub: $19.99/mo</p>
+      <p>PPV: $12.99</p>
+      <button onclick="editPrices()">Edit Prices</button>
+    </div>
+  </div>
+  <button class="logout" onclick="logout()">Logout</button>
+  <script>
+    function upload() {
+      alert('Upload clicked! Bunny.net ready next.');
+    }
+    function editPrices() {
+      alert('Prices clicked! Editor ready next.');
+    }
+    function logout() {
+      window.location.href = 'index.html';
+    }
+  </script>
+</body>
+</html>
